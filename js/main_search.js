@@ -21,5 +21,4 @@ $searchBar.on('keyup', function(event) { //1. Input into the search field gets c
         }
 
     });
-    console.log(searchTerm); //logs search input/key strokes
 });
