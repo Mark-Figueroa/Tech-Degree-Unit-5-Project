@@ -1,22 +1,25 @@
 // Script for search filter
 
-const $searchBar = $(`#searchForm > input`);
-let $img = $(`.imageContainer > a[title]`);
+const $searchBar = $(`#searchForm > input`); //Gets the input field in the form
+const $img = $(`.imageContainer > a[title]`); // Gets the caption from the title attribute of the large images 
 
-$searchBar.on('keyup', function(event) {
-    var searchTerm = $(this).val().toLowerCase();
+
+
+
+$searchBar.on('keyup', function(event) { //1. Input into the search field gets converted to lowercase 
+    const searchTerm = $(this).val().toLowerCase();
     // const $imgList = $img.toArray();
 
-    $img.show();
+    $img.show(); // 2. The function overrides the DOM's display settings for <a> tags with the title attribute
 
-    $img.each(function() {
+    $img.each(function() { //3.Then, the function runs a function that finds any of the <a> tags with the title attribute and compares their title with the search field input
 
-        var title = $(this).attr('title').toLowerCase();
+        const title = $(this).attr('title').toLowerCase(); //3a. this converts the title attribute to lowercase
 
-        if (!title.includes(searchTerm) && searchTerm !== null) {
-            $(this).hide();
+        if (!title.includes(searchTerm) && searchTerm !== null) { //3b. If the lowercase search input keystroke matches text within the title attribute, then the function will hide the titles that do not match.
+            $(this).hide(); //3c. Hides non-matching titles
         }
 
     });
-    console.log(searchTerm);
+    console.log(searchTerm); //logs search input/key strokes
 });

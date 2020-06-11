@@ -1,3 +1,7 @@
+/* ========================
+        Main styles 
+===========================*/
+
 * {
     box-sizing: border-box;
 }
@@ -15,6 +19,11 @@ header h1 {
 header a {
     text-decoration: none;
 }
+
+
+/* ========================
+        Body Component styles 
+===========================*/
 
 #search-field {
     padding: 15px;
@@ -50,6 +59,11 @@ header a {
     filter: brightness(1.1);
 }
 
+
+/* ========================
+        Footer styles 
+===========================*/
+
 footer {
     border-top: 2px solid rgba(70, 131, 180, 0.568);
     margin-top: 45px;
@@ -67,7 +81,9 @@ footer h3:hover {
 }
 
 
-/* Styles for lightbox overrides */
+/* ==========================
+Styles for lightbox overrides 
+=============================*/
 
 .mfp-title {
     text-align: center;
